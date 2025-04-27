@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REM vs PX Example</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+
+    /* Section using px */
+    .section-px {
+      background-color: #d194c2;
+      padding: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-px h2 {
+      font-size: 24px; /* px used */
+    }
+
+    .section-px p {
+      font-size: 16px; /* px used */
+    }
+
+    /* Section using rem */
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    .section-rem {
+      background-color: #e8881b;
+      padding: 1.25rem; /* 20px */
+      margin-bottom: 20px;
+    }
+
+    .section-rem h2 {
+      font-size: 1.5rem; /* 24px */
+    }
+
+    .section-rem p {
+      font-size: 1rem; /* 16px */
+    }
+
+    /* Responsive: if screen smaller, reduce root font size */
+    @media (max-width: 600px) {
+      html {
+        font-size: 14px; /* 1rem = 14px now */
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="section-px">
+    <h2>Section using PX</h2>
+    <p>This text uses pixel (px) units. It does not adjust well with screen size changes.</p>
+  </div>
+
+  <div class="section-rem">
+    <h2>Section using REM</h2>
+    <p>This text uses rem units. It adjusts better when screen size or user settings change.</p>
+  </div>
+
+</body>
+</html>

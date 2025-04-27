@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header, footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+  }
+  
+  aside {
+    background-color: #f1c40f;
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+  }
+  
+  main {
+    background-color: #ecf0f1;
+    flex: 3;
+    padding: 20px;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    aside {
+      min-width: 100%;
+    }
+  }
+  
